@@ -23,7 +23,7 @@ class Menu(TimeStampedModel):
                            default=DayCycle.UNSPECIFIED)
     title = models.CharField("Title of menu", max_length=255)
     slug = AutoSlugField("Title address", unique=True, always_update=False,
-                         populate_from="title")
+                         populate_from="day")
     description = models.TextField("Description", blank=True)
     active = models.BooleanField("Active", default=False)
     image = models.ImageField("Image of the meal", upload_to='uploads/',

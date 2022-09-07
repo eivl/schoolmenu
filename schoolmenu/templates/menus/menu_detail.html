@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}Menu: {{ menu.title }}{% endblock %}
+{% block content %}
+    <h1>{{ menu.title }}</h1>
+    <p>{{ menu.description }}</p>
+    <img src="{{ menu.image.url }}" alt="{{ menu.title }}">
+  <!-- Celery -->
+    {%  if menu.celery %}
+        <input type="checkbox" name="celery" checked=true disabled="disabled"> Celery
+    {% endif %}
+  <!-- Wheat -->
+    {%  if menu.wheat %}
+        <input type="checkbox" name="wheat" checked=true disabled="disabled"> Wheat
+    {% endif %}
+  <!-- Crustaceans -->
+    {%  if menu.crustaceans %}
+        <input type="checkbox" name="crustaceans" checked=true disabled="disabled"> Crustaceans
+    {% endif %}
+  <!-- Eggs -->
+    {%  if menu.eggs %}
+        <input type="checkbox" name="eggs" checked=true disabled="disabled"> Eggs
+    {% endif %}
+  <!-- Fish -->
+    {%  if menu.fish %}
+        <input type="checkbox" name="fish" checked=true disabled="disabled"> Fish
+    {% endif %}
+  <!-- Milk -->
+    {%  if menu.milk %}
+        <input type="checkbox" name="milk" checked=true disabled="disabled"> Milk
+    {% endif %}
+  <!-- Lupin -->
+    {%  if menu.lupin %}
+        <input type="checkbox" name="lupin" checked=true disabled="disabled"> Lupin
+    {% endif %}
+  <!-- Molluscs -->
+    {%  if menu.molluscs %}
+        <input type="checkbox" name="molluscs" checked=true disabled="disabled"> Molluscs
+    {% endif %}
+  <!-- Mustard -->
+    {%  if menu.mustard %}
+        <input type="checkbox" name="mustard" checked=true disabled="disabled"> Mustard
+    {% endif %}
+  <!-- Peanuts -->
+    {%  if menu.peanuts %}
+        <input type="checkbox" name="peanuts" checked=true disabled="disabled"> Peanuts
+    {% endif %}
+  <!-- Sesame -->
+    {%  if menu.sesame %}
+        <input type="checkbox" name="sesame" checked=true disabled="disabled"> Sesame
+    {% endif %}
+  <!-- soybeans -->
+    {%  if menu.soybeans %}
+        <input type="checkbox" name="soybeans" checked=true disabled="disabled"> soybeans
+    {% endif %}
+  <!-- Suphur Dioxide and Sulphites -->
+    {%  if menu.sulphur_dioxide %}
+        <input type="checkbox" name="sulphur_dioxide" checked=true disabled="disabled"> Suphur Dioxide and Sulphites
+    {% endif %}
+  <!-- Nuts -->
+    {%  if menu.nuts %}
+        <input type="checkbox" name="nuts" checked=true disabled="disabled"> Nuts
+    {% endif %}
+{% endblock %}
